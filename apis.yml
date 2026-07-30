@@ -1,8 +1,27 @@
 aid: labrys-biologics
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/labrys-biologics.png
 name: Labrys Biologics
-description: Labrys Biologics is a company surfaced as a portfolio company of canaan-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: 'Labrys Biologics was a clinical-stage biopharmaceutical company founded in 2012
+  and headquartered in San Mateo, California, developing monoclonal antibody therapeutics
+  targeting calcitonin gene-related peptide (CGRP) for the prevention of chronic and episodic
+  migraine. The company was venture-backed, with Canaan Partners among its investors, and was
+  acquired by Teva Pharmaceutical Industries in 2014, after which its lead anti-CGRP antibody
+  program continued under Teva. Labrys Biologics no longer operates as an independent company
+  and maintains no developer or API surface: enrichment probes on 2026-07-19 found the
+  registrant domain labrysbiologics.com resolving but serving nothing (TCP 80 and 443 closed),
+  delegated to Teva nameservers, with a no-mail SPF/DMARC lockdown and no GitHub organization.
+  This profile is retained as a historical portfolio-company record rather than an API listing.'
 url: https://raw.githubusercontent.com/api-evangelist/labrys-biologics/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +29,33 @@ x-backed-by:
 - canaan-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: teva
+x-acquired-year: 2014
+x-operating: false
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Therapeutics
+- Neurology
+- Clinical Research
+- Acquired
 apis: []
+common:
+- type: DomainSecurity
+  url: security/labrys-biologics-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

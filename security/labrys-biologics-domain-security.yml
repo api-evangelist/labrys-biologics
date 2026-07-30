@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of the registrant domain labrysbiologics.com
+note: >-
+  labrysbiologics.com resolves but serves nothing — TCP 80 and 443 are both closed, so no
+  TLS/HSTS posture can be observed. The domain is a defended brand registration held under
+  Teva nameservers (ns3/ns4/ns5.tevapharm.com) following Teva's 2014 acquisition of Labrys
+  Biologics. The mail posture is a deliberate no-mail lockdown: SPF "v=spf1 -all" and DMARC
+  p=reject with aggregate reports routed to dmarc.RUA@tevapharm.com.
+hosts:
+- host: labrysbiologics.com
+  https: false
+  http_port_80: closed
+  https_port_443: closed
+  resolves: true
+  a_record: 192.115.248.118
+  hsts: null
+- host: labrysbio.com
+  https: false
+  http_port_80: closed
+  https_port_443: closed
+  resolves: true
+  a_record: 192.115.248.118
+  hsts: null
+domains:
+- domain: labrysbiologics.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: v=spf1 -all
+  dmarc: true
+  dmarc_policy: reject
+  dmarc_rua: dmarc.RUA@tevapharm.com
+  nameservers:
+  - ns3.tevapharm.com
+  - ns4.tevapharm.com
+  - ns5.tevapharm.com
+  registrar: Nom-iq Ltd. dba COM LAUDE
+  registrant_organization: Labrys Biologics
+  created: '2012-12-09'
+  expires: '2026-12-09'
